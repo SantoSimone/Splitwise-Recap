@@ -1,0 +1,11 @@
+.idea
+
+venv*
+
+*pycache*
+
+outputs/*
+
+*oscuri*
+
+env.json
