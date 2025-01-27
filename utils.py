@@ -50,7 +50,7 @@ class Expense:
             desc=exp.description,
             category=exp.category.name,
             money=float(exp.cost),
-            users=[user.first_name for user in exp.users]
+            users=[user.first_name for user in exp.users if user.owed_share != '0.0']
         )
 
 
