@@ -2,3 +2,5 @@ numpy
 pandas
 splitwise
 matplotlib
+streamlit
+plotly
