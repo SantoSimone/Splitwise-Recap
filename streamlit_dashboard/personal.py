@@ -21,6 +21,7 @@ def personal_page():
             st.title('Per category')
             by_category_df = filter_df_by_categories(user_df)
             st.dataframe(by_category_df, use_container_width=True, hide_index=True)
+            st.write(f"Total: {by_category_df['Sum'].sum():.2f}")
             fig = px.pie(by_category_df, values='Sum', names='Category', title='Per category')
             st.plotly_chart(fig, use_container_width=True)
 
@@ -28,6 +29,7 @@ def personal_page():
             st.title('Per month')
             by_months_df = filter_df_by_months(user_df)
             st.dataframe(by_months_df, use_container_width=True, hide_index=True)
+            st.write(f"Total: {by_months_df['Sum'].sum():.2f}")
             fig = px.pie(by_months_df, values='Sum', names='Month', title='Per month')
             st.plotly_chart(fig, use_container_width=True)
 
